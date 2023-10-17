@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE- edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/3c44aa10f3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/prestamo.css">
+    <title>Simulador de Crédito</title>
+    <style>
+        .header-box {
+            background-color: #001f3f; /* Color de fondo del cuadro */
+            padding: 10px;
+            text-align: center;
+            color: #fff; /* Color de texto dentro del cuadro */
+        }
+
+        .header-box h1 {
+            margin: 0;
+        }
+
+        .button {
+            background-color: #001f3f; /* Azul marino */
+            color: #fff; /* Color de texto del botón */
+            border: #173441 1.8px solid;
+            width: 100px;
+            font-family: 'arial';
+            font-size: 15px;
+            border-radius: 2px;
+            padding: 10px;
+            margin-left: 77%;
+        }
+    </style>
+</head>
+<body>
+    <div class="header-box">
+        <h1>SIMULADOR DE CRÉDITO</h1>
+    </div>
+    <div class="form">
+        <form>
+            <div>
+                <label for="nombre">NOMBRE COMPLETO
+                    <input type="text" placeholder="Ingrese el nombre completo del cliente" id="nombre">
+                </label>
+            </div>
+            <div>
+                <label for="email">CORREO ELECTRÓNICO
+                    <input type="text" placeholder="Ingrese el correo electrónico del cliente" id="email">
+                </label>
+            </div>
+            <div>
+                <label for="capital">CAPITAL
+                    <input type="text" placeholder="Ingrese el capital prestado" id="capital">
+                    <i class="fas fa-coins"></i>
+                </label>
+            </div>
+            <div>
+                <label for="couta">CUOTAS
+                    <input type="text" placeholder="Ingrese las cuotas del préstamo" id="couta">
+                    <i class="far fa-calendar-alt"></i>
+                </label>
+            </div>
+            <div>
+                <label for="interes">TASA DE INTERÉS ANUAL
+                    <input type="text" placeholder "Ingrese la tasa de interés anual" id="interes">
+                    <i class="fas fa-hand-holding-usd"></i>
+                </label>
+            </div>
+        </form>
+        <button class="button" onclick="gen_table();">CALCULAR</button>
+    </div>
+    <hr>
+    <table class="tab">
+        <thead>
+            <tr>
+                <td>NRO</td>
+                <td>CAPITAL</td>
+                <td>INTERÉS</td>
+                <td>IMPORTE A PAGAR</td>
+            </tr>
+        </thead>
+        <tbody id="tab">
+        </tbody>
+        <tfoot>
+            <tr>
+                <td class="ft">TOTAL</td>
+                <td id="t1"></td>
+                <td id="t2"></td>
+                <td id="t3"></td>
+            </tr>
+        </tfoot>
+    </table>
+    <!-- Agrega la leyenda al final de la página con el texto adicional -->
+    <div class="header-box">
+        <p>Costo Anual Total (CAT) Promedio del 66.98% (más IVA) a 36 meses para fines comparativos exclusivamente.</p>
+        <p>Fecha de cálculo al 01 de noviembre de 2023.</p>
+        <p>Los montos finales están sujetos a cambios sin previo aviso y aprobación de crédito.</p>
+    </div>
+    <script src="scripts/prestamo.js"></script>
+</body>
+</html>
